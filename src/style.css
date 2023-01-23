@@ -32,3 +32,8 @@ body {
   margin: auto 10px 8px auto;
   font-size: 36pt;
 }
+
+.refresher {
+  border-radius: 10px;
+  margin-top: 15px;
+}

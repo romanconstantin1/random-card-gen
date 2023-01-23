@@ -19,7 +19,16 @@ const cardVal = [
   "Q",
   "K"
 ];
-window.onload = function() {
+
+window.onload = () => {
+  document
+    .querySelector(".refresher")
+    .addEventListener("click", () => cardGenerator());
+
+  cardGenerator();
+};
+
+let cardGenerator = () => {
   let suitGen = Math.floor(Math.random() * 4);
   let colGen = Math.floor(Math.random() * 2);
   let valGen = Math.floor(Math.random() * 13);
