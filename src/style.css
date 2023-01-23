@@ -1,1 +1,34 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: green;
+}
+
+.card-face {
+  display: flex;
+  height: 300px;
+  width: 200px;
+  border-radius: 15px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.top-left {
+  margin: 2px auto auto 10px;
+  font-size: 36pt;
+}
+
+.center-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64pt;
+}
+
+.bottom-right {
+  display: flex;
+  margin: auto 10px 8px auto;
+  font-size: 36pt;
+}
