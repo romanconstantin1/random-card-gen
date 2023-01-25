@@ -32,20 +32,34 @@ let cardGenerator = () => {
   let suitGen = Math.floor(Math.random() * 4);
   let colGen = Math.floor(Math.random() * 2);
   let valGen = Math.floor(Math.random() * 13);
+  let cardWidth = document.querySelector(".width");
+  let cardHeight = document.querySelector(".height");
+
   document.querySelector(".top-left").innerHTML = `${suitList[suitGen]}`;
   document.querySelector(".top-left").style = `color: ${suitCol[colGen]}`;
   document.querySelector(".center-text").innerHTML = `${cardVal[valGen]}`;
   document.querySelector(".bottom-right").innerHTML = `${suitList[suitGen]}`;
   document.querySelector(".bottom-right").style = `color: ${suitCol[colGen]}`;
-  document.querySelector(".card-face").style.setProperty("width", "200px");
+
+  cardWidth.addEventListener("change", function() {
+    let inputNum = document.querySelector(".width").value;
+    if (inputNum < 200) {
+      alert("Minimum width of 200px please!");
+    } else {
+      document
+        .querySelector(".card-face")
+        .style.setProperty("width", `${inputNum}px`);
+    }
+  });
+
+  cardHeight.addEventListener("change", function() {
+    let inputNum = document.querySelector(".height").value;
+    if (inputNum < 300) {
+      alert("Minimum height of 300px please!");
+    } else {
+      document
+        .querySelector(".card-face")
+        .style.setProperty("height", `${inputNum}px`);
+    }
+  });
 };
-
-let cardWidth = document.querySelector(".width");
-console.log(cardWidth);
-let cardHeight = document.querySelector(".height");
-
-if (cardWidth != "") {
-  document
-    .querySelector(".card-face")
-    .style.setProperty("width", `${cardWidth}px`);
-}
