@@ -43,8 +43,12 @@ let cardGenerator = () => {
 
   cardWidth.addEventListener("change", function() {
     let inputNum = document.querySelector(".width").value;
-    if (inputNum < 200) {
+    if (inputNum == 0) {
+      document.querySelector(".card-face").style.setProperty("width", `200px`);
+    } else if (inputNum < 200) {
       alert("Minimum width of 200px please!");
+    } else if (inputNum > 700) {
+      alert("Maximum width of 700px please!");
     } else {
       document
         .querySelector(".card-face")
@@ -54,8 +58,12 @@ let cardGenerator = () => {
 
   cardHeight.addEventListener("change", function() {
     let inputNum = document.querySelector(".height").value;
-    if (inputNum < 300) {
+    if (inputNum == 0) {
+      document.querySelector(".card-face").style.setProperty("height", `300px`);
+    } else if (inputNum < 300) {
       alert("Minimum height of 300px please!");
+    } else if (inputNum > 600) {
+      alert("Maximum height of 600px please!");
     } else {
       document
         .querySelector(".card-face")
