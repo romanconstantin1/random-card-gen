@@ -37,4 +37,15 @@ let cardGenerator = () => {
   document.querySelector(".center-text").innerHTML = `${cardVal[valGen]}`;
   document.querySelector(".bottom-right").innerHTML = `${suitList[suitGen]}`;
   document.querySelector(".bottom-right").style = `color: ${suitCol[colGen]}`;
+  document.querySelector(".card-face").style.setProperty("width", "200px");
 };
+
+let cardWidth = document.querySelector(".width");
+console.log(cardWidth);
+let cardHeight = document.querySelector(".height");
+
+if (cardWidth != "") {
+  document
+    .querySelector(".card-face")
+    .style.setProperty("width", `${cardWidth}px`);
+}

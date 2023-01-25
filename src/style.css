@@ -22,6 +22,7 @@ body {
 
 .center-text {
   display: flex;
+  font-family: "Permanent Marker", cursive;
   justify-content: center;
   align-items: center;
   font-size: 64pt;
@@ -36,4 +37,10 @@ body {
 .refresher {
   border-radius: 10px;
   margin-top: 15px;
+}
+
+.width,
+.height {
+  border-radius: 10px;
+  margin-top: 10px;
 }
